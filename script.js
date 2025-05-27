@@ -32,12 +32,14 @@ function closeContactPopup() {
 
 // Download the card as image using html2canvas
 function downloadCard() {
-  const card = document.getElementById('card');
+  const card = document.getElementById("card");
   html2canvas(card).then(canvas => {
     const link = document.createElement('a');
-    link.download = 'business_card.png';
-    link.href = canvas.toDataURL();
+    link.href = canvas.toDataURL("image/png");
+    link.download = 'vcard.png';
+    document.body.appendChild(link);
     link.click();
+    document.body.removeChild(link);
   });
 }
 
