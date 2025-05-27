@@ -61,8 +61,7 @@ const galleryImages = [
   "1 (1).jpg",
   "1 (2).jpg",
   "1 (3).jpg",
-  "1 (4).jpg",
-  "1 (5).jpg"
+  "1 (4).jpg"
 ];
 
 let currentIndex = 0;
@@ -82,7 +81,7 @@ function startCarouselAutoPlay() {
   carouselInterval = setInterval(() => {
     currentIndex = (currentIndex + 1) % galleryImages.length;
     updateCarousel();
-  }, 15000);
+  }, 2000);
 }
 
 function stopCarouselAutoPlay() {
@@ -95,7 +94,7 @@ function openModal(index) {
   document.getElementById("modalImage").src = galleryImages[currentIndex];
   modalInterval = setInterval(() => {
     changeImage(1);
-  }, 15000);
+  }, 2000);
 }
 
 function closeModal() {
