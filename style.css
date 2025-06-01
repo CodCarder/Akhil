@@ -1,8 +1,8 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background: linear-gradient(135deg, #0f0f0f, #2b2b2b);
-  color: #f5f5f5;
+  background: linear-gradient(135deg, #D2D0A0, #9EBC8A);
+  color: #1a1a1a;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,24 +11,23 @@ body {
 }
 
 .card {
-  background: #1e1e1e;
-  border: 1px solid #333;
+  background: #D2D0A0;
+  border: 1px solid #9EBC8A;
   border-radius: 16px;
   padding: 30px;
   max-width: 400px;
   width: 100%;
   text-align: center;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.6);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
-/* Profile picture with slide-in from top effect */
 .avatar,
 .proF {
   width: 100px;
   height: 100px;
   object-fit: cover;
-  border: 3px solid #999;
+  border: 3px solid #537D5D;
   margin-bottom: 20px;
   opacity: 0;
   animation: slideInFromTop 0.8s ease-out forwards;
@@ -45,34 +44,28 @@ body {
 }
 
 @keyframes slideInFromTop {
-  0% {
-    opacity: 0;
-    transform: translateY(-50px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  0% { opacity: 0; transform: translateY(-50px); }
+  100% { opacity: 1; transform: translateY(0); }
 }
 
 h1 {
   font-size: 2.0em;
   margin: 10px 0 5px;
-  color: #ffffff;
+  color: #1a1a1a;
 }
 
 .title {
   font-size: 1em;
-   margin: 10px 0 5px;
+  margin: 10px 0 5px;
   font-weight: 300;
-  color: #b0b0b0;
+  color: #444;
 }
 
 .company {
   font-weight: bold;
   font-size: 1.7em;
   margin: 5px 0;
-  color: #ffcc00;
+  color: #537D5D;
 }
 
 .icons {
@@ -84,7 +77,7 @@ h1 {
 
 .icons a {
   text-decoration: none;
-  color: #f5f5f5;
+  color: #537D5D;
   font-size: 1.5em;
   opacity: 0;
   animation-duration: 0.8s;
@@ -92,60 +85,36 @@ h1 {
   animation-timing-function: ease;
 }
 
-.icons a:nth-child(1) {
-  animation-name: slideInLeft;
-  animation-delay: 0.2s;
-}
+.icons a:nth-child(1) { animation-name: slideInLeft; animation-delay: 0.2s; }
+.icons a:nth-child(2) { animation-name: slideInTop; animation-delay: 0.4s; }
+.icons a:nth-child(3) { animation-name: slideInRight; animation-delay: 0.6s; }
+.icons a:nth-child(4) { animation-name: slideInBottom; animation-delay: 0.8s; }
+.icons a:nth-child(5) { animation-name: fadeInScale; animation-delay: 1s; }
 
-.icons a:nth-child(2) {
-  animation-name: slideInTop;
-  animation-delay: 0.4s;
-}
-
-.icons a:nth-child(3) {
-  animation-name: slideInRight;
-  animation-delay: 0.6s;
-}
-
-.icons a:nth-child(4) {
-  animation-name: slideInBottom;
-  animation-delay: 0.8s;
-}
-
-.icons a:nth-child(5) {
-  animation-name: fadeInScale;
-  animation-delay: 1s;
-}
-
-/* Icon animations */
 @keyframes slideInLeft {
   0% { opacity: 0; transform: translateX(-40px); }
   100% { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes slideInRight {
   0% { opacity: 0; transform: translateX(40px); }
   100% { opacity: 1; transform: translateX(0); }
 }
-
 @keyframes slideInTop {
   0% { opacity: 0; transform: translateY(-40px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes slideInBottom {
   0% { opacity: 0; transform: translateY(40px); }
   100% { opacity: 1; transform: translateY(0); }
 }
-
 @keyframes fadeInScale {
   0% { opacity: 0; transform: scale(0.5); }
   100% { opacity: 1; transform: scale(1); }
 }
 
 .section2 {
-  background: #2b2b2b;
-  color: #e0e0e0;
+  background: #73946B;
+  color: #1a1a1a;
   border-radius: 12px;
   padding: 20px;
   margin-top: 20px;
@@ -164,11 +133,11 @@ h1 {
 .footer {
   margin-top: 20px;
   font-size: 0.8em;
-  color: #777;
+  color: #666;
 }
 
 .footer a {
-  color: #999;
+  color: #1a1a1a;
   text-decoration: underline;
 }
 
@@ -176,7 +145,7 @@ h1 {
   position: absolute;
   top: 15px;
   right: 10px;
-  background: #444;
+  background: #537D5D;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -185,7 +154,7 @@ h1 {
   color: white;
   cursor: pointer;
   font-size: 1.2em;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+  box-shadow: 0 0 10px rgba(83, 125, 93, 0.5);
   border: none;
 }
 
@@ -193,7 +162,7 @@ h1 {
 .download-button {
   position: absolute;
   bottom: 15px;
-  background: #444;
+  background: #537D5D;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -202,7 +171,7 @@ h1 {
   color: white;
   cursor: pointer;
   font-size: 1.2em;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.5);
+  box-shadow: 0 0 10px rgba(83, 125, 93, 0.4);
 }
 
 .download-button {
@@ -219,11 +188,11 @@ h1 {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background: #f5f5f5;
+  background: #fff;
   color: #111;
   padding: 20px;
   border-radius: 10px;
-  box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
   z-index: 1000;
   text-align: center;
 }
@@ -251,8 +220,8 @@ h1 {
   font-size: 1.2em;
   text-decoration: none;
   z-index: 10;
-  background: #222121;
-  box-shadow: 0 0 10px rgba(245, 198, 10, 0.5);
+  background: #9EBC8A;
+  box-shadow: 0 0 10px rgba(83, 125, 93, 0.4);
 }
 
 .overlay {
@@ -262,16 +231,16 @@ h1 {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 999;
 }
 
 .location-section {
   margin-top: 30px;
   padding: 16px;
-  background-color: #1e1e1e;
-  border-top: 2px solid #444;
-  color: #f5f5f5;
+  background-color: #9EBC8A;
+  border-top: 2px solid #73946B;
+  color: #1a1a1a;
   text-align: center;
   border-radius: 16px;
 }
@@ -280,7 +249,7 @@ h1 {
   margin-bottom: 12px;
   font-size: 1.2rem;
   font-weight: bold;
-  color: #ffcc00;
+  color: #537D5D;
 }
 
 .map-container {
@@ -290,7 +259,7 @@ h1 {
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 0 10px rgba(255, 204, 0, 0.3);
+  box-shadow: 0 0 10px rgba(83, 125, 93, 0.3);
 }
 
 .map-container iframe {
@@ -316,7 +285,6 @@ h1 {
   }
 }
 
-
 .gallery-carousel {
   width: 100%;
   max-width: 300px;
@@ -337,7 +305,6 @@ h1 {
   display: block;
 }
 
-/* Modal styles */
 .modal {
   display: none;
   position: fixed;
